@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+	<meta charset="utf-8">
+	<title>Colorisation de cartes SVG par CSV</title> 
+	<link href="./commun.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="./commun.js"></script> 
+	<script type="text/javascript" src="./carto.js"></script> 
+	<script type="text/javascript">
+		
+	</script> 
+	<style type="text/css"> 
+		#conteneur .colonne_droite table { 
+			width: 100%; 
+			margin: 0.15rem; 
+			padding: 0.15rem; 
+			border: solid 1px #ddd; 
+		} 
+		#conteneur .colonne_droite table td { 
+			margin: 0.05rem; 
+			padding: 0.05rem; 
+			border: solid 1px #ddd;
+		} 
+		#conteneur .colonne_droite textarea { 
+			display: block;
+			width: 100%; 
+			margin: 0.05rem auto 0.05rem auto; 
+			padding: 0.35rem; 
+			border: solid 1px #ddd; 
+		} 
+		#contenu[contexte="aider"] fieldset legend { 
+			color: #aaa;
+			font-weight: 900; 
+		} 
+		#contenu[contexte="aider"] fieldset:first-of-type {
+			font-weight: 900; 
+			border: solid 1px orange; 
+		} 
+	</style> 
+</head>
+<body>
+	
+	<header>
+		<h1>Colo'Cartes</h1> 
+		<div id="menu"> 
+			<ul> 
+				<li action="aider">Aide</li> 
+				<li action="choisir">Choisir une carte SVG</li> 
+				<li action="chercher">Chercher élément</li> 
+				<li action="editer">Editer CSS SVG</li> 
+				<li action="parser" type="contenu">Parser contenu CSV</li> 
+				<li action="parser" type="bornage">Parser bornage CSV</li> 
+				<li action="voir" type="contenu">Voir contenu CSV</li> 
+				<li action="voir" type="bornage">Voir bornage CSV</li> 
+				<li action="coloriser">Coloriser SVG</li> 
+				<li action="actionner">Console JS</li> 
+				<li action="exporter">Exporter SVG</li> 
+			</ul> 
+		</div> 
+	</header> 
+	
+	<div id="conteneur"> 
+		<div class="colonne_gauche"> 
+			<object 
+				data="./communes-dept-na.svg" 
+				type="image/svg+xml" 
+				id="carteSVG" 
+				width="100%" 
+			></object> 
+		</div> 
+		<div class="colonne_droite" id="contenu"> 
+			<h1>Bienvenue !</h1> 
+			<p>Vous pouvez choisir dans le menu général les actions à effectuer.</p> 
+			<p>L'ordre normal des opérations est le suivant : <ol> 
+				<li>Choix de la carte visée,</li> 
+				<li>Edition éventuelle d'un élément grâce à l'outil de recherche,</li> 
+				<li>Edition de la colorisation grâce à la feuille de style avec les conditions des segments,</li> 
+				<li>Parser le contenu et les segments (bornage), puis vérification,</li> 
+				<li>Colorisation automatique,</li> 
+				<li>Vérification et opération-s supplémentaire-s grâce à la console JS,</li> 
+				<li>Exportation du code source pour diffusion.</li> 
+			</ol></p> 
+		</div> 
+	</div> 
+	
+	<div id="suraffichage">
+		<span>Chargement du DOM...</span> 
+	</div> 
+	
+</body>
+</html> 
